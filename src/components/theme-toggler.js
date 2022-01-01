@@ -10,7 +10,7 @@ class ThemeToggle extends React.Component {
               <DarkModeToggle
               onChange={e => toggleTheme(e ? 'dark' : 'light')}
               checked={theme === 'dark'}
-              size={60}
+              size={50}
               speed={2}
             />
           )}
