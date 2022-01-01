@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import ThemeToggle from "./theme-toggler"
+import './../../src/style.css'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -22,12 +24,14 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
+      <header className="global-header" style={{display: "flex", justifyContent: "space-between"}}>{header}<ThemeToggle /></header>
+      <main>
+        
+        {children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Built with ❤ and
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://www.gatsbyjs.com">Gatsby</a> by <a href="https://github.com/minku-singh">Minku Singh</a>
       </footer>
     </div>
   )

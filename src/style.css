@@ -87,6 +87,10 @@ footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
 
+footer > a{
+  text-decoration: none;
+}
+
 hr {
   background: var(--color-accent);
   height: 1px;
@@ -114,13 +118,13 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  color: var(--textTitle);
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--textTitle);
 }
 
 h2 {
@@ -154,7 +158,7 @@ h4 > a,
 h5 > a,
 h6 > a {
   text-decoration: none;
-  color: inherit;
+  color: var(--linkColor);
 }
 
 /* Prose */
@@ -230,7 +234,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: var(--linkColor);
 }
 
 a:hover,
@@ -331,3 +335,26 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+
+/* theme  */
+body {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --hr: #ec823a;
+  --linkColor: rgb(255, 69, 0);
+
+  color: var(--textNormal);
+  background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: #070625;
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: rgb(247, 247, 247);
+  --hr: #f2a365;
+  --linkColor: rgb(255, 101, 45);
+} 
